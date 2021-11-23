@@ -14,22 +14,21 @@ export default function App() {
   return (
     <Router>
       <nav>
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/about">About</Link>
-        <br />
-        <Link to="/profile">Profile</Link>
-        <br />
+        <Link to="/">Home</Link> <Link to="/about">About</Link>{' '}
+        <Link to="/profile">Profile</Link>{' '}
         <Link to="/SDASDSDSADS">404 Pgae | Not found!</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:user" element={<Profile />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
-      <footer><h1>This is a footer</h1></footer>
+      <footer>
+        <h1>This is a footer</h1>
+      </footer>
     </Router>
   );
 }
